@@ -7,7 +7,7 @@ router.get("/", async (req, res) => {
   try {
     const postData = await Post.findAll({
       attributes: ["id", "title", "postText", "created_at"],
-      order: ["created_at", "DESC"],
+    //   order: ["created_at", "DESC"],
       include: [
         {
           model: Comment,
@@ -36,7 +36,7 @@ router.get("/", async (req, res) => {
 
 router.get("/project/:id", async (req, res) => {
   try {
-    const projectData = await Project.findByPk(req.params.id, {
+    const postData = await Post.findByPk(req.params.id, {
       include: [
         {
           model: User,
@@ -45,10 +45,10 @@ router.get("/project/:id", async (req, res) => {
       ],
     });
 
-    const project = projectData.get({ plain: true });
+    const post = postData.get({ plain: true });
 
     res.render("project", {
-      ...project,
+      ...post,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
