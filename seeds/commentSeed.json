@@ -1,0 +1,27 @@
+[
+    {
+        "commentText": "Comment 1",
+        "user_id": 1,
+        "post_id": 1
+    },
+    {
+        "commentText": "Comment 2",
+        "user_id": 2,
+        "post_id": 2
+    },
+    {
+        "commentText": "Comment 3",
+        "user_id": 3,
+        "post_id": 3
+    },
+    {
+        "commentText": "Comment 4",
+        "user_id": 4,
+        "post_id": 4
+    },
+    {
+        "commentText": "Comment 5",
+        "user_id": 5,
+        "post_id": 5
+    }
+]

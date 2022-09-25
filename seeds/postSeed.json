@@ -1,0 +1,28 @@
+[
+    {
+        "title": "title1",
+        "postText": "post 1",
+        "user_id": 1
+        
+    },
+    {
+        "title": "title2",
+        "postText": "post 2",
+        "user_id": 2
+    },
+    {
+        "title": "title3",
+        "postText": "post 3",
+        "user_id": 3
+    },
+    {
+        "title": "title4",
+        "postText": "post 4",
+        "user_id": 4
+    },
+    {
+        "title": "title5",
+        "postText": "post 5",
+        "user_id": 5
+    }
+]
