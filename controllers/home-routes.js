@@ -7,23 +7,20 @@ router.get("/", async (req, res) => {
   try {
     const postData = await Post.findAll({
       attributes: ["id", "title", "postText", "created_at"],
-      
       include: [
+        User,
         {
           model: Comment,
-          attributes: ["id", "commentText", "user_id", "post_id", "created_at"],
-
-          include: {
-            model: User,
-            attributes: ["username"],
-          },
+          include: [User],
         },
       ],
-      order: ["created_at", "DESC"],
+
+      
+      order: [["created_at", "DESC"]],
     });
 
     const posts = postData.map((post) => post.get({ plain: true }));
-
+    console.log(posts);
     res.render("homepage", {
         posts,
       logged_in: req.session.logged_in,

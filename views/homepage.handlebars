@@ -7,17 +7,21 @@
         <div class="card-body bg-light">
           <div class="small text-muted d-flex justify-content-between">
             <div>
-              <span>{{format_date_short createdAt}}</span>
+              <span>{{post.createdAt}}</span>
             </div>
             <div class="d-flex align-items-center">
-              <span>By: {{user.username}}</span>
+              <span>By: {{post.user.username}}</span>
             </div>
           </div>
           <h2 class="card-title">{{title}}</h2>
           <hr class="my-1" />
-          <p class="card-text">{{format_content content}}</p>
+          <p class="card-text">{{postText}}</p>
           <hr class="my-1" />
-          <a class="btn btn-info" href="/post/{{id}}">Read more →</a>
+           {{#each post.comments as |comment|}}
+           <h2>
+            {{comment.commentText}}
+           </h2>
+           {{/each}}
         </div>
       </div>
     </div>
