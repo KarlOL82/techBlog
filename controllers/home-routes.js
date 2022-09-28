@@ -59,12 +59,20 @@ router.get("/signup", (req, res) => {
         include: [
           { 
             model: Post,
+            include: [
+              {
+              model: User,
+              }
+            ]
+
+          
           }
         ],
         order: [[Post, 'updated_at', 'DESC']],
       });
   
       const user = userData.get({ plain: true });
+      console.log(user);
   
       res.render("profile", {
         ...user,
