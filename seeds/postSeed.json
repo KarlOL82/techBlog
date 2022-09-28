@@ -1,28 +1,28 @@
 [
     {
-        "title": "title1",
-        "postText": "post 1",
+        "title": "Dinner Goals",
+        "postText": "We should get a pizza!",
         "user_id": 1
         
     },
     {
-        "title": "title2",
-        "postText": "post 2",
+        "title": "Existential Question",
+        "postText": "Why do we bother with the masks? It really makes no sense.",
         "user_id": 2
     },
     {
-        "title": "title3",
-        "postText": "post 3",
+        "title": "Hey",
+        "postText": "You gonna eat that?",
         "user_id": 3
     },
     {
-        "title": "title4",
-        "postText": "post 4",
+        "title": "Dude",
+        "postText": "Dude.",
         "user_id": 4
     },
     {
-        "title": "title5",
-        "postText": "post 5",
+        "title": "This is weird",
+        "postText": "How is this my life?",
         "user_id": 5
     }
 ]
