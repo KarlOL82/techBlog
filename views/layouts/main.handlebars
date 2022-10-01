@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
 
-  <body>
-    <header class="bg-cyan-400 text-white flex">
+  <body class ="bg-cyan-900">
+    <header class="bg-cyan-400 text-white flex min-h-fit">
       <h1>
         <a href="/" class="px-4 py-3 block hover:bg-cyan-400">
           <span class="text-lg"></span>
@@ -18,20 +18,20 @@
         </a>
       </h1>
 
-      <nav class="ml-auto flex">
+      <nav class="ml-auto flex leading-10">
         {{#if logged_in}}
           <a href="/" class="px-4 py-3 block hover:bg-cyan-700">Home</a>
           
           <a href="/profile"class="px-4 py-3 block hover:bg-cyan-700">Dashboard <span class="text-lg"></span></a>
           
-          <button class="px-4 py-3 hover:bg-lime-500"id="logout">logout</button>
+          <button class="px-4 py-3 hover:bg-cyan-700"id="logout">logout</button>
         {{else}}
           <a href="/login" class="px-4 py-3 block hover:bg-cyan-700">Login</a>
         {{/if}}
       </nav>
 
     </header>
-    <main class="container mx-auto my-8 px-5">
+    <main class="container mx-auto bg-cyan-900 my-8 px-5">
       {{{body}}}
     </main>
     <footer>

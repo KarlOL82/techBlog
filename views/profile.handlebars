@@ -1,13 +1,14 @@
-<div class="container bg-cyan-400 text-white flex-row mx-auto px-4 justify-content-center">
+<div class="container bg-cyan-400 text-white flex-row mx-auto px-4 py-5 rounded-md justify-content-center">
   <h1 class="text-6xl font-extrabold text-center">Welcome, {{username}}</h1>
 </div>
 {{#each posts as |post|}}
-    <div class="container d-flex justify-content-center my-5">
+    <div class="container d-flex justify-content-center rounded-md bg-cyan-400 my-5">
       <div class="card mb-4 bg-dark" style="width: 80%;">
         <div class="py-3 bg-dark"></div>
         <div class="card-body bg-light">
           <div class="small text-muted d-flex justify-content-between">
             <div>
+              
               <span>{{post.createdAt}}</span>
             </div>
             <div class="d-flex align-items-center">
@@ -22,13 +23,18 @@
            <h2>
             {{comment.commentText}}
            </h2>
+           
+           <h2>
+            <button class="px-4 py-3 hover:bg-cyan-700"id="deletePost">Delete Post</button>
+           </h2>
+            
            {{/each}}
         </div>
       </div>
     </div>
   {{/each}}
 
-  <form class="form-example" id="post-element">
+  <form class="form-example bg-slate-300" id="post-element">
   <div class="form-example">
     <label for="name">Title of Post: </label>
     <input type="text" name="name" id="post-form" required>

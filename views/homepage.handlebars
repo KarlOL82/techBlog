@@ -1,16 +1,20 @@
 <main class="container justify-content-center">
 
-  <div class="container bg-cyan-400 text-white flex-row mx-auto px-4 justify-content-center">
-  <h1 class="text-6xl font-extrabold">Console Blog</h1>
-  <h3 class ="text-3xl">Where Developers develop their development skills</h3>
-  <h3 class ="text-3xl">by helping developing Developers develop</h3>
-</div>
+  <div
+    class="container rounded-md bg-violet-400 text-white flex-row mx-auto py-5 px-5 justify-content-center"
+  >
+    <h1 class="text-6xl font-extrabold">Console Blog</h1>
+    <h3 class="text-3xl">Where Developers develop their development skills</h3>
+    <h3 class="text-3xl">by helping developing Developers develop</h3>
+  </div>
 
   {{#each posts as |post|}}
-    <div class="container d-flex justify-content-center my-5">
-      <div class="card mb-4 bg-dark" style="width: 80%;">
+    <div
+      class="container d-flex justify-content-center border-1 border-violet-400 rounded-md bg-cyan-400 px-5 my-5"
+    >
+      <div class="card mb-4 bg-dark">
         <div class="py-3 bg-dark"></div>
-        <div class="card-body bg-light">
+        <div class="card-body max-w-md bg-dark">
           <div class="small text-muted d-flex justify-content-between">
             <div>
               <span>{{post.createdAt}}</span>
@@ -23,14 +27,29 @@
           <hr class="my-1" />
           <p class="card-text">{{postText}}</p>
           <hr class="my-1" />
-           {{#each post.comments as |comment|}}
-           <h2>
-            {{comment.commentText}}
-           </h2>
-           {{/each}}
+          {{#each post.comments as |comment|}}
+            <h2>
+              {{comment.commentText}}
+            </h2>
+            {{#if logged_in}}
+              console.log({{logged_in}})
+              <div>{{Text}}
+                <button
+                  class="px-4 py-3 hover:bg-cyan-700"
+                  id="comment"
+                >Comment</button>
+              </div>
+              {{!-- {{else}}
+              <a href="/login" class="px-4 py-3 block hover:bg-cyan-700">Login to post or comment</a> --}}
+            {{/if}}
+          {{/each}}
+          <div>
+            
+            
+          </div>
         </div>
       </div>
     </div>
   {{/each}}
-
+  <script src="/js/makeComment.js"></script>
 </main>

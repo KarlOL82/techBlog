@@ -28,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/KarlOL82/techBlog/issues"
   },
-  "homepage": "https://github.com/KarlOL82/techBlog#readme"
+  "homepage": "https://github.com/KarlOL82/techBlog#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }
