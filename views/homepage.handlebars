@@ -12,18 +12,18 @@
     <div
       class="container mx-auto d-flex w-4/5 justify-center border-1 border-violet-400 rounded-md bg-cyan-400 px-5 my-5"
     >
-      <divclass="card mb-4 bg-dark justify-center">
+      <div class="card mb-4 bg-dark justify-center" style="width: 100%;">
         <div class="py-3 bg-dark"></div>
-        <div class="card-body justify-center max-w-md bg-dark">
+        <div class="card-body justify-center bg-dark">
           <div class="small text-muted d-flex justify-between">
             <div>
               <span class="text-xs">{{post.createdAt}}</span>
             </div>
             <div class="d-flex align-items-center">
-              <span class="text-xl font-bold">By: {{post.user.username}}</span>
+              <span class="text-xl font-bold text-violet-700">By: {{post.user.username}}</span>
             </div>
           </div>
-          <h2 class="card-title text-2xl font-bold">{{title}}</h2>
+          <h2 class="card-title text-2xl text-zinc-900 font-bold">{{title}}</h2>
           <hr class="my-2" />
           <p class="card-text text-lg">{{postText}}</p>
           <hr class="my-2" />
@@ -33,17 +33,37 @@
             </h2>
             
             
-          {{/each}}
+  {{/each}}
 
-          {{#if ../logged_in}}
-    
-                <button class="px-4 py-3 hover:bg-cyan-700" id="comment">Comment</button>
+  {{#if ../logged_in}}
               
-              {{else}}
+          <h2><button class="px-4 py-3 bg-violet-400 hover:bg-pink-400 font-semibold leading-6 rounded-md" id="comment">Comment</button></h2>
 
-              <a href="/login" class="px-4 py-3 block hover:bg-cyan-700">Login to post or comment</a>
+      <form class="hidden form-example rounded-md bg-cyan-400" id="comment-element">
+        <div class="form-example text-xl px-4 py-4">
+            <label for="post-body">Enter your Comment: </label><br />
+            <textarea
+              class="bg-cyan-100 border-cyan-900 border-4 mx-3 my-3 h-52 w-4/6 rounded-md indent-6"
+              placeholder="Type your comment..."
+              type="text"
+              name="post-body"
+              id="commentContent"></textarea>
+              </textarea>
+              </div>
+              <div class="form-example">
+              <input
+              class="bg-pink-400 py-5 px-5 mx-2 my-2 rounded-xl w-40"
+              id="postCommentButton"
+              type="submit"
+              value="Submit Comment"
+              />
+        </div>
+      </form>  
+  {{else}}
+
+              <a href="/login" class="px-4 py-3 bg-cyan-400 block hover:bg-cyan-700">Login to post or comment</a>
               
-            {{/if}}
+  {{/if}}
           <div>
             
             
