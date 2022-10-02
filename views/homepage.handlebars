@@ -28,7 +28,7 @@
           <p class="card-text text-lg">{{postText}}</p>
           <hr class="my-2" />
           {{#each post.comments as |comment|}}
-          <h2 class="showComment text-lg">
+          <h2 class="showComment text-lg" id="addComment{{post.id}}">
           {{comment.commentText}}
           </h2>
             
