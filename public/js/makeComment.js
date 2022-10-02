@@ -12,11 +12,11 @@ const newCommentFormHandler = async (event) => {
     event.preventDefault();
   
     
-    const title = document.querySelector("#post-form").value.trim();
-    const postText = document.querySelector("#commentContent").value.trim();
+    // const title = document.querySelector("#post-form").value.trim();
+    const commentContent = document.querySelector("#commentContent").value.trim();
   
     
-    if (title && postText) {
+    if (commentContent) {
       const response = await fetch("/api/comment/new", {
         method: "POST",
         
@@ -26,9 +26,9 @@ const newCommentFormHandler = async (event) => {
   
       if (response.ok) {
        
-        document.location.replace("/homepage");
+        document.location.replace("/profile");
       } else {
-        alert("Failed to post new blog.");
+        alert("Failed to post new comment.");
       }
     }
   };

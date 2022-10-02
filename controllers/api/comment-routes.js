@@ -15,7 +15,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.post('/new', withAuth, async (req, res) => {
+router.post('/Post', withAuth, async (req, res) => {
   try {
     const newComment = await Comment.create({
       ...req.body,
