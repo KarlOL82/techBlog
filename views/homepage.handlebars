@@ -10,39 +10,40 @@
 
   {{#each posts as |post|}}
     <div
-      class="container d-flex justify-content-center border-1 border-violet-400 rounded-md bg-cyan-400 px-5 my-5"
+      class="container mx-auto d-flex w-4/5 justify-center border-1 border-violet-400 rounded-md bg-cyan-400 px-5 my-5"
     >
-      <div class="card mb-4 bg-dark">
+      <divclass="card mb-4 bg-dark justify-center">
         <div class="py-3 bg-dark"></div>
-        <div class="card-body max-w-md bg-dark">
-          <div class="small text-muted d-flex justify-content-between">
+        <div class="card-body justify-center max-w-md bg-dark">
+          <div class="small text-muted d-flex justify-between">
             <div>
-              <span>{{post.createdAt}}</span>
+              <span class="text-xs">{{post.createdAt}}</span>
             </div>
             <div class="d-flex align-items-center">
-              <span>By: {{post.user.username}}</span>
+              <span class="text-xl font-bold">By: {{post.user.username}}</span>
             </div>
           </div>
-          <h2 class="card-title">{{title}}</h2>
-          <hr class="my-1" />
-          <p class="card-text">{{postText}}</p>
-          <hr class="my-1" />
+          <h2 class="card-title text-2xl font-bold">{{title}}</h2>
+          <hr class="my-2" />
+          <p class="card-text text-lg">{{postText}}</p>
+          <hr class="my-2" />
           {{#each post.comments as |comment|}}
-            <h2>
+            <h2 class="text-lg">
               {{comment.commentText}}
             </h2>
-            {{#if logged_in}}
-              console.log({{logged_in}})
-              <div>{{Text}}
-                <button
-                  class="px-4 py-3 hover:bg-cyan-700"
-                  id="comment"
-                >Comment</button>
-              </div>
-              {{!-- {{else}}
-              <a href="/login" class="px-4 py-3 block hover:bg-cyan-700">Login to post or comment</a> --}}
-            {{/if}}
+            
+            
           {{/each}}
+
+          {{#if ../logged_in}}
+    
+                <button class="px-4 py-3 hover:bg-cyan-700" id="comment">Comment</button>
+              
+              {{else}}
+
+              <a href="/login" class="px-4 py-3 block hover:bg-cyan-700">Login to post or comment</a>
+              
+            {{/if}}
           <div>
             
             
@@ -51,5 +52,8 @@
       </div>
     </div>
   {{/each}}
+
+
+
   <script src="/js/makeComment.js"></script>
 </main>

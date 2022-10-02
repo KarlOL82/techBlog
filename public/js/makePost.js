@@ -18,7 +18,7 @@ const newPostFormHandler = async (event) => {
        
         document.location.replace("/profile");
       } else {
-        alert("Failed to post new blog.");
+        alert("Failed to post new blog entry.");
       }
     }
   };
