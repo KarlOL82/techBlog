@@ -3,6 +3,7 @@ function showCommentForm () {
     // const showCommentButton = document.querySelector("#comment");
     document.querySelector("#comment-element").classList.remove("hidden");
     document.querySelector("#comment").classList.remove("hidden");
+    console.log("click");
 };
 
 
@@ -34,7 +35,7 @@ const newCommentFormHandler = async (event) => {
   document
     .querySelector("#comment")
     .addEventListener("click", showCommentForm);
-    console.log("click");
+    
   
   document
     .querySelector("#postCommentButton")
