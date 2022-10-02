@@ -20,7 +20,7 @@ const newCommentFormHandler = async (event) => {
       const response = await fetch("/api/comment/new", {
         method: "POST",
         
-        body: JSON.stringify({ title, postText }),
+        body: JSON.stringify({commentContent}),
         headers: { "Content-Type": "application/json" },
       });
   
