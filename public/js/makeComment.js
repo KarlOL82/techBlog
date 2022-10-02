@@ -1,9 +1,10 @@
-function showCommentForm () {
+function showCommentForm (event) {
     // const commentForm = document.querySelector("#comment-element");
     // const showCommentButton = document.querySelector("#comment");
-    document.querySelector("#comment-element").classList.remove("hidden");
-    document.querySelector("#comment").classList.remove("hidden");
-    console.log("click");
+    document.querySelector("#"+event.target.dataset.id).classList.remove("hidden");
+    event.target.classList.add("hidden");
+    console.log(event.target.dataset.id);
+
 };
 
 
@@ -32,9 +33,11 @@ const newCommentFormHandler = async (event) => {
     }
   };
   
-  document
-    .querySelector("#comment")
-    .addEventListener("click", showCommentForm);
+  const commentEvents = document.querySelectorAll(".comment")
+  for (i =0; i < commentEvents.length; i++) {
+    commentEvents[i].addEventListener("click", showCommentForm);
+  }
+    
     
   
   document
