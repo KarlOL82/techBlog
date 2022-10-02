@@ -1,6 +1,4 @@
 function showCommentForm (event) {
-    // const commentForm = document.querySelector("#comment-element");
-    // const showCommentButton = document.querySelector("#comment");
     document.querySelector("#"+event.target.dataset.id).classList.remove("hidden");
     event.target.classList.add("hidden");
     console.log(event.target.dataset.id);
