@@ -12,7 +12,7 @@ const newCommentFormHandler = async (event) => {
     event.preventDefault();
   
     
-    const post_id = event.target.getAttribute('data-id');
+    const post_id = event.target.getAttribute('showComment');
     const commentContent = document.querySelector("#commentContent").value.trim();
   
     
