@@ -10,18 +10,18 @@ const newCommentFormHandler = async (event) => {
     event.preventDefault();
   
     
-    const post_id = event.target.getAttribute('showComment');
-    const commentContent = document.querySelector("#commentContent").value.trim();
+    const post_id = event.target.getAttribute('data-id');
+    const commentText = document.querySelector("#commentContent").value.trim();
   
-    
-    if (commentContent && post_id) {
+    console.log(post_id,commentText, "FORM COMMENT")
+    if (commentText && post_id) {
       const response = await fetch("/api/comment/new", {
         method: "POST",
         
-        body: JSON.stringify({commentContent, post_id}),
+        body: JSON.stringify({commentText, post_id}),
         headers: { "Content-Type": "application/json" },
       });
-  
+      console.log(response);
       if (response.ok) {
        
         document.location.replace("/profile");
@@ -39,6 +39,6 @@ const newCommentFormHandler = async (event) => {
     
   
   document
-    .querySelector("#postCommentButton")
+    .querySelector(".addComment")
     .addEventListener("submit", newCommentFormHandler);
     
