@@ -39,7 +39,7 @@
               
           <h2><button data-id="addComment{{post.id}}" class="comment px-4 py-3 bg-violet-400 hover:bg-pink-400 font-semibold leading-6 rounded-md" id="comment">Comment</button></h2>
 
-      <form data-id="{{post.id}}" class="addComment hidden form-example rounded-md bg-cyan-400" id="addComment{{post.id}}">
+      <form data-id="{{post.id}}" class="postNewComment hidden form-example rounded-md bg-cyan-400" id="addComment{{post.id}}">
         <div class="form-example text-xl px-4 py-4">
             <label for="post-body">Enter your Comment: </label><br />
             <textarea
@@ -53,7 +53,7 @@
               <div class="form-example">
               <input
               data-id="{{post.id}}"
-              class="bg-pink-400 py-5 px-5 mx-2 my-2 rounded-xl w-40"
+              class="postCommentButton bg-pink-400 py-5 px-5 mx-2 my-2 rounded-xl w-40"
               id="postCommentButton"
               type="submit"
               value="Submit Comment"
