@@ -23,7 +23,7 @@ router.post('/new', withAuth, async (req, res) => {
       ...req.body,
       user_id: req.session.user_id,
     });
-    console.log(newComment);
+    console.log("new Comment created at backend",newComment);
     res.status(200).json(newComment);
   } catch (err) {
     console.log(err);

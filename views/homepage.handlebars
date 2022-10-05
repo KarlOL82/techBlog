@@ -28,8 +28,11 @@
           <p class="card-text text-lg">{{postText}}</p>
           <hr class="my-2" />
           {{#each post.comments as |comment|}}
-          <h2 class="showComment text-lg" id="addComment{{post.id}}">
-          {{comment.commentText}}
+          <h3 class="showComment text-lg" id="addComment{{post.id}}">
+          Comment by: <span class="text-violet-700">{{post.user.username}}</span>
+          </h3>
+          <h2 class="mx-1 my-2 py-1">
+            {{comment.commentText}}
           </h2>
             
             

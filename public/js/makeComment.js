@@ -21,10 +21,10 @@ const newCommentFormHandler = async (event) => {
         body: JSON.stringify({commentText, post_id}),
         headers: { "Content-Type": "application/json" },
       });
-      console.log(response);
+      console.log("comment response from comment file ",response);
       if (response.ok) {
        
-        document.location.replace("/profile");
+        window.location.reload();
       } else {
         alert("Failed to post new comment.");
       }
