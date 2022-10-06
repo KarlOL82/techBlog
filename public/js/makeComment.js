@@ -6,7 +6,7 @@ function showCommentForm (event) {
 };
 
 
-const newCommentFormHandler = async (event) => {
+const CommentFormHandler = async (event) => {
     event.preventDefault();
   
     
@@ -31,14 +31,18 @@ const newCommentFormHandler = async (event) => {
     }
   };
   
-  const commentEvents = document.querySelectorAll(".comment")
+  const commentEvents = document.getElementsByClassName("commentArr")
   for (i =0; i < commentEvents.length; i++) {
     commentEvents[i].addEventListener("click", showCommentForm);
-  }
+    
+  }console.log(commentEvents);
     
     
   
-  document
-    .querySelector(".postNewComment")
-    .addEventListener("submit", newCommentFormHandler);
+  const submitCommentEvents = document.getElementsByClassName("postNewComment")
+  for (j =0; j < submitCommentEvents.length; j++) {
+    submitCommentEvents[j].addEventListener("submit", CommentFormHandler)
+  };
+  
+    
     
