@@ -11,7 +11,7 @@ const CommentFormHandler = async (event) => {
   
     
     const post_id = event.target.getAttribute('data-id');
-    const commentText = document.querySelector("#commentContent").value.trim();
+    const commentText = document.querySelector(".commentContent").value.trim();
   
     console.log(post_id,commentText, "FORM COMMENT")
     if (commentText && post_id) {
