@@ -26,15 +26,15 @@
         <hr class="my-1" />
         <p class="card-text text-lg">{{postText}}</p>
         <hr class="my-1" />
+        
         {{#each post.comments as |comment|}}
-          <h2>
+          <h3 class="showComment border-solid border-pink-400  text-lg">
+          Comment by: <span class="text-violet-700">{{post.user.username}}</span>
+          </h3>
+          <h2 class="mx-1 my-2 py-1">
             {{comment.commentText}}
           </h2>
-
-          <h2>
-            <button class="px-4 py-3 hover:bg-cyan-700" id="deletePost">Delete
-              Post</button>
-          </h2>
+          <button class="deleteComment px-4 py-3 bg-violet-400 hover:bg-pink-400 font-semibold leading-6 rounded-md">Delete Post"></button>
 
         {{/each}}
       </div>
