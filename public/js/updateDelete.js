@@ -1,6 +1,6 @@
 
 function delButtonHandler(event) {
-  //   event.preventDefault();
+    event.preventDefault();
   console.log("click delete");
   
   if (event.target.hasAttribute("data-id")) {
@@ -18,13 +18,14 @@ function delButtonHandler(event) {
   }
 }
 
+// function showCommentForm(event) {
+//   document.querySelector("#addComment").classList.remove("hidden");
+// }
 
 
-// edit comment
 const updateComHandler = async (event) => {
-  // const commentText = Post.commentText;
-  console.log("click Edit");
   
+  console.log("click Edit");
 
   if (event.target.hasAttribute("data-id")) {
     const id = event.target.getAttribute("data-id");
@@ -53,7 +54,9 @@ for (i = 0; i < deleteBtnArray.length; i++) {
   deleteBtnArray[i].addEventListener("click", delButtonHandler);
 }
 
+
+
 const updateComment = document.getElementsByClassName("editComment");
 for (i = 0; i < updateComment.length; i++) {
-  updateComment[i].addEventListener("click", updateComHandler);
+  updateComment[i].addEventListener("click", showCommentForm);
 }

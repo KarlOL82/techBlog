@@ -36,12 +36,14 @@ window.onload = function() {
     }
   };
 
+  
+
   const commentEvents = document.getElementsByClassName("commentArr");
   for (i = 0; i < commentEvents.length; i++) {
     commentEvents[i].addEventListener("click", showCommentForm);
   }
-  
 
+  
   const submitCommentEvents = document.getElementsByClassName("postNewComment");
   for (j = 0; j < submitCommentEvents.length; j++) {
     submitCommentEvents[j].addEventListener("submit", CommentFormHandler);
