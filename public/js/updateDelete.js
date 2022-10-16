@@ -18,9 +18,9 @@ function delButtonHandler(event) {
   }
 }
 
-// function showCommentForm(event) {
-//   document.querySelector("#addComment").classList.remove("hidden");
-// }
+function showCommentForm(event) {
+  document.querySelector("#addComment").classList.remove("hidden");
+}
 
 
 const updateComHandler = async (event) => {
@@ -58,5 +58,5 @@ for (i = 0; i < deleteBtnArray.length; i++) {
 
 const updateComment = document.getElementsByClassName("editComment");
 for (i = 0; i < updateComment.length; i++) {
-  updateComment[i].addEventListener("click", showCommentForm);
+  updateComment[i].addEventListener("click", updateComHandler);
 }

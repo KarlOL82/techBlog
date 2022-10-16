@@ -34,8 +34,9 @@ window.onload = function() {
         alert("Failed to post new comment.");
       }
     }
-  };
+  }
 
+  
   
 
   const commentEvents = document.getElementsByClassName("commentArr");
@@ -49,5 +50,6 @@ window.onload = function() {
     submitCommentEvents[j].addEventListener("submit", CommentFormHandler);
   }
 
+  
 }
 
