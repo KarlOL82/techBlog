@@ -9,9 +9,9 @@ An online blog site for devs to learn from their peers and share their knowledge
 - [email](klinfeldt@gmail.com)  
 
 ## User Story  
-AS A manager at an internet retail company
-I WANT a back end for my e-commerce website that uses the latest technologies
-SO THAT my company can compete with other e-commerce companies  
+AS A developer who writes about tech
+I WANT a CMS-style blog site
+SO THAT I can publish articles, blog posts, and my thoughts and opinions 
 
 ## Overview  
 This application runs in Node Js with Express, MySQL, Sequelize, and Handlebars. It is deployed with Heroku via Github. The app allows users to create a profile with unique username and password and, once logged in, they can create blog-style posts, comment on others' posts, and delete and edit comments that they have made.  
