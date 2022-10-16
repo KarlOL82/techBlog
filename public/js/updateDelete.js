@@ -1,4 +1,4 @@
-
+// function to delete a comment belonging to logged-in user
 function delButtonHandler(event) {
     event.preventDefault();
   console.log("click delete");
@@ -49,13 +49,14 @@ const updateComHandler = async (event) => {
   }
 };
 
+// Event listener for the delete comment button
 const deleteBtnArray = document.getElementsByClassName("delComment");
 for (i = 0; i < deleteBtnArray.length; i++) {
   deleteBtnArray[i].addEventListener("click", delButtonHandler);
 }
 
 
-
+// Event listener for the edit comment button
 const updateComment = document.getElementsByClassName("editComment");
 for (i = 0; i < updateComment.length; i++) {
   updateComment[i].addEventListener("click", updateComHandler);

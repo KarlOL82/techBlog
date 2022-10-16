@@ -1,3 +1,4 @@
+// Formats the date for the created at display
 module.exports = {
   format_date: (date) => {
       

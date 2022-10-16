@@ -1,3 +1,4 @@
+// Function to allow users to make a new post
 const newPostFormHandler = async (event) => {
     event.preventDefault();
   
@@ -23,7 +24,7 @@ const newPostFormHandler = async (event) => {
     }
   };
   
-  
+  // Event listener for new post form
   document
     .querySelector("#post-element")
     .addEventListener("submit", newPostFormHandler);

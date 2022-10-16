@@ -2,7 +2,7 @@ const router = require('express').Router();
 
 const { User } = require('../../models');
 
-
+// creates a new user via signup.js
 router.post('/', async (req, res) => {
   try {
     const newUserData = await User.create({
@@ -23,6 +23,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+// Login as an existing user
 router.post('/login', async (req, res) => {
   try {
     
@@ -57,6 +58,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
+// Logs user out of current session
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     

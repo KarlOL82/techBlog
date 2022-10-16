@@ -3,6 +3,7 @@ const router = require("express").Router();
 const { Post, Comment, User } = require("../models");
 const withAuth = require("../utils/auth");
 
+// Fetch and render all posts to the homepage
 router.get("/", async (req, res) => {
   try {
     const postData = await Post.findAll({
@@ -20,8 +21,7 @@ router.get("/", async (req, res) => {
     });
 
     const posts = postData.map((post) => post.get({ plain: true }));
-    // console.log(posts);
-    // console.log(req.session.logged_in);
+    
     res.render("homepage", {
         posts,
       logged_in: req.session.logged_in,
@@ -31,6 +31,7 @@ router.get("/", async (req, res) => {
   }
 });
 
+// Takes user to the login page and allows them to log in
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/');
@@ -40,6 +41,7 @@ router.get("/login", (req, res) => {
   res.render("login");
   });
 
+  // Allows the user to create a new profile
 router.get("/signup", (req, res) => {
     
   if (req.session.logged_in) {
@@ -50,7 +52,7 @@ router.get("/signup", (req, res) => {
      res.render("signup");
   });
 
-
+// Allows user to access the dashboard after authenticating their login credentials
   router.get("/profile", withAuth, async (req, res) => {
 
     try {
