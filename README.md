@@ -33,5 +33,9 @@ There is no installation required for this application as it is deployed to Hero
 
 ![Dashboard while logged in](./assets/image3.png "Photo of the dashboard page while logged in")  
 
+## Video Demo  
+
+[Video Walkthrough Demo](https://www.youtube.com/watch?v=4AFTl2QLKY0)
+
 
 
