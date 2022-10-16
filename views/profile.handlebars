@@ -27,21 +27,21 @@
         <p class="card-text text-lg">{{postText}}</p>
         <hr class="my-1" />
         
-        {{#each post.comments as |comment|}}
+        {{#each comments as |comment|}}
           <h3 class="showComment border-solid border-pink-400  text-lg">
           Comment by: <span class="text-violet-700">{{post.user.username}}</span>
           </h3>
           <h2 class="mx-1 my-2 py-1">
-            {{comment.commentText}}
+            {{post.commentText}}
           </h2>
-          <button class="deleteComment px-4 py-3 bg-violet-400 hover:bg-pink-400 font-semibold leading-6 rounded-md">Delete Post"></button>
+          <button class="deleteComment px-4 py-3 bg-violet-400 hover:bg-pink-400 font-semibold leading-6 rounded-md">Delete Post"</button>
 
         {{/each}}
       </div>
     </div>
   </div>
 {{/each}}
-
+{{#if logged_in}}
 <form class="form-example rounded-md bg-cyan-400 w-4/5 mx-auto" id="post-element">
   <div class="form-example text-xl px-3 py-3">
     <label for="name">Create New Post:</label><br />
@@ -73,7 +73,7 @@
     />
   </div>
 </form>
-
+{{/if}}
 <script src="/js/makePost.js"></script>
 <script src="/js/makeComment.js"></script>
 <script src="/js/updateDelete.js"></script>
